@@ -1,1 +1,9 @@
-<p>restaurants works!</p>
+<div class="restaurants-container">
+    <div class="restaurant" *ngFor="let restaurant of restaurants; let i = index">
+        <img src="{{restaurant.imgUrl}}" alt="restaurant hero image">
+        <div class="desc">
+            <p>{{restaurant.name}}</p>
+            <p>{{restaurant.type}}</p>
+        </div>    
+    </div>
+</div>
