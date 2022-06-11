@@ -17,6 +17,7 @@ export class RestaurantsComponent implements OnInit {
       responce.forEach((el) => {
         const data: any = el.payload.doc.data();
         this.restaurants.push({
+          id: parseInt(el.payload.doc.id),
           name: data.name,
           imgUrl: data.imgUrl,
           type: data.type,

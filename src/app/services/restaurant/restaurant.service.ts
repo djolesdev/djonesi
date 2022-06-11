@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore'
-import { Observable } from 'rxjs';
-import { Restaurant } from 'src/app/models/Restaurant';
 
 @Injectable({
   providedIn: 'root'
@@ -13,4 +11,9 @@ export class RestaurantService {
   getAllRestaurants() {
     return this.firestore.collection('/restaurants').snapshotChanges()
   }
+
+  getRestaurantMenu(id: string) {
+    return this.firestore.collection('/menus').doc(`${id}`).snapshotChanges()
+  }
+
 }

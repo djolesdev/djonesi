@@ -9,7 +9,8 @@ import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire/compat';
-import { RestaurantsComponent } from './components/restaurants/restaurants.component'
+import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { RestaurantComponent } from './components/restaurant/restaurant.component'
 // import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RestaurantsComponent } from './components/restaurants/restaurants.compo
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
