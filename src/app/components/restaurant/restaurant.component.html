@@ -1,19 +1,6 @@
 <div class="helper">
     <div class="menu-container">
-        <div class="menu-item" *ngFor = "let item of menu; let i = index" >
-            <img src="{{item.imgUrl}}" alt="item image">
-            <div class="desc">
-                <p>{{item.name}}</p>
-                <div class="container">
-                    <p>{{item.price}}RSD</p>
-                    <div class="order">
-                        <button>-</button>
-                        <input type="text" disabled>
-                        <button>+</button>
-                    </div>
-                    <button id="add-to-cart" >Add to cart</button>
-                </div>
-            </div>
-        </div>
+        <app-item *ngFor = "let item of menu; let i = index" [item] = "item">
+        </app-item>
     </div>
 </div>

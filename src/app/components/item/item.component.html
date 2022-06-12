@@ -1,0 +1,15 @@
+<div class="item">
+    <img src="{{item.imgUrl}}" alt="item image">
+    <div class="desc">
+        <p>{{item.name}}</p>
+        <div class="container">
+            <p>{{item.price}}RSD</p>
+            <div class="order">
+                <button (click) = "minus()">-</button>
+                <input type="text" disabled name="quantity" [(ngModel)]="quantity" class="quantity">
+                <button (click) = "plus()">+</button>
+            </div>
+            <button id="add-to-cart" >Add to cart</button>
+        </div>
+    </div>
+</div>

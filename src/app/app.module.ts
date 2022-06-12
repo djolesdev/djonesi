@@ -14,6 +14,7 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 
 import { StoreModule } from '@ngrx/store';
 import { cartReducer } from './state/cart/cart.reducer';
+import { ItemComponent } from './components/item/item.component';
 // import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { cartReducer } from './state/cart/cart.reducer';
     RegisterComponent,
     LoginComponent,
     RestaurantsComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
