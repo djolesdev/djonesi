@@ -26,7 +26,4 @@ export class RestaurantsComponent implements OnInit {
     });
   }
 
-  djole() {
-    console.log(this.restaurants)
-  }
 }

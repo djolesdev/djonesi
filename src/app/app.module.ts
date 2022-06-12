@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component'
+
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './state/cart/cart.reducer';
 // import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @NgModule({
@@ -25,6 +28,7 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    StoreModule.forRoot({cart: cartReducer}),
     FormsModule,
   ],
   providers: [],

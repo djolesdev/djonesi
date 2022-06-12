@@ -1,4 +1,7 @@
-export interface User {
-    email: string,
-    password: string,
+export class User {
+    email: string
+
+    constructor(email: string) {
+        this.email = email
+    }
 }
