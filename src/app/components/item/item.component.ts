@@ -9,12 +9,9 @@ import { Input } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
 
-
-
   @Input() item!: MenuItem;
 
   quantity: number = 0
-
 
   constructor() { }
 
@@ -28,6 +25,10 @@ export class ItemComponent implements OnInit {
   minus() {
     if (this.quantity <= 0) return
     this.quantity--;
+  }
+
+  submitHandler() {
+    
   }
 
 }

@@ -9,7 +9,7 @@
                 <input type="text" disabled name="quantity" [(ngModel)]="quantity" class="quantity">
                 <button (click) = "plus()">+</button>
             </div>
-            <button id="add-to-cart" >Add to cart</button>
+            <button id="add-to-cart" (click) = "submitHandler()">Add to cart</button>
         </div>
     </div>
 </div>
