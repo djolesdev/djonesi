@@ -17,7 +17,6 @@ export class AuthService {
     return this.isLogged.asObservable()
   }
 
-  // login method
   login(email : string, password : string) {
     this.fireauth.signInWithEmailAndPassword(email,password).then(res => {
 
@@ -34,7 +33,6 @@ export class AuthService {
     })
   }
 
-  // register method
   register(email : string, password : string) {
     this.fireauth.createUserWithEmailAndPassword(email, password).then( res => {
       alert('Registration Successful');
@@ -45,7 +43,6 @@ export class AuthService {
     })
   }
 
-  // sign out
   logout() {
     this.fireauth.signOut().then( () => {
       localStorage.removeItem('token');

@@ -1,6 +1,6 @@
-<nav class="nav-bar" *ngIf="isLogged | async">
+<nav class="nav-bar"  *ngIf="isLogged | async">
   <p>Djonesi</p>
-  <ul class="nav navbar-nav" routerLinkActive="active">
+  <ul class="nav-list" routerLinkActive="active">
     <li class="nav-item"><a class="nav-link" routerLink="restaurants">Restaurants</a></li>
     <li class="nav-item"><a class="nav-link" (click) = "logout()" >Logout</a></li>
   </ul>

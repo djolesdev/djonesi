@@ -1,0 +1,21 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 4em;
+    background-color: rgb(237, 112, 45);
+    font-size: 17px;
+    color: white;
+}
+.nav-list{
+    display: flex;
+    gap: 2em;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}

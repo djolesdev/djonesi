@@ -1,7 +1,6 @@
 import { addToCart, removeFromCart } from "./cart.actions";
 import { createReducer, on } from "@ngrx/store";
 import { CartItem } from "src/app/models/CartItem";
-import { Action } from "rxjs/internal/scheduler/Action";
 
 export interface CartState {
     items: CartItem[],
@@ -16,10 +15,11 @@ export const initialState: CartState = {
 export const cartReducer = createReducer(
     initialState,
     on(addToCart, (state, { newItem }) => {
+
         const updatedTotalPrice = state.totalPrice + newItem.quantity * newItem.price
 
         const existingCartItemIndex = state.items.findIndex((temp) => {
-            temp.id === newItem.id
+            return temp.id === newItem.id
         })
 
         const existingCartItem = state.items[existingCartItemIndex]
