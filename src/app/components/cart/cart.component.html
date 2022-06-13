@@ -1,0 +1,12 @@
+<div class="cart-container">
+    <div class="cart"  *ngFor = "let item of cart; let i = index" >
+        <div class="cart-item">
+            <p>{{item.name}}</p>
+            <p>Quantity: {{item.quantity}}</p>
+        </div>
+    </div>
+    <div class="create-order">
+        <p>Total price: {{totalPrice}}RSD</p>
+        <button class="create" (click) = "createOrder()">Create order</button>
+    </div>
+</div>

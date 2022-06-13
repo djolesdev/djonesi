@@ -1,8 +1,13 @@
-import {User} from '../models/User'
+import { CartItem } from "./CartItem";
 
-export interface Order {
-    user: User,
-    items: [], 
-    totalPrice: number,
-    addres: string,
+export class Order {
+  user: string;
+  items: CartItem[];
+  totalPrice: number;
+
+  constructor(user: string, items: CartItem[], totalPrice: number) {
+    this.user = user;
+    this.items = items;
+    this.totalPrice = totalPrice;
+  }
 }

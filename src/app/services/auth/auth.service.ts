@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth' 
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/User';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -24,7 +23,7 @@ export class AuthService {
 
         localStorage.setItem('token','true');
 
-        localStorage.setItem('user', JSON.stringify(new User(email)))
+        localStorage.setItem('user', email)
 
         this.router.navigate(['/restaurants'])
     }, err => {
